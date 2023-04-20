@@ -45,12 +45,16 @@ colon1 <- RunssGSEA(object = colon1,genelist = immune_list)
 DEboxplot(colon)
 
 ```
+![image](https://user-images.githubusercontent.com/122006615/233399369-7799a532-706a-4568-8cd6-ad1148519c84.png)
 
 ### Visualization for ssGSEA score
 ```
 HexssGSEAplot(colon,type = 'C1QC_TAM')
 
 ```
+![image](https://user-images.githubusercontent.com/122006615/233401762-76ee47aa-95de-4b4f-babf-c0da475f9752.png)
+
+
 ### Calculate enrichment fold
 ```
 XXXXXXXXX
