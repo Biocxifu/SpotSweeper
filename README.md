@@ -53,7 +53,7 @@ HexssGSEAplot(colon,type = 'C1QC_TAM')
 ```
 ### Calculate enrichment fold
 ```
-HexssGSEAplot(colon,type = 'C1QC_TAM')
+XXXXXXXXX
 
 ```
 
