@@ -6,7 +6,7 @@
 
 ## Install
 ```
-devtools::install_github('')
+devtools::install_github('Biocxifu/SpotSweeper')
 ```  
 ## Usage
 
