@@ -36,3 +36,5 @@ HexSpatialPlot(object = colon.sct,group.by ='celltype',align ='v',
 ```
 
 ```
+## Citations
+- Gao S, Shi Q, Zhang Y, et al. Identification of HSC/MPP expansion units in fetal liver by single-cell spatiotemporal transcriptomics. Cell Res. 2022;32(1):38-53. doi:10.1038/s41422-021-00540-7
