@@ -26,8 +26,9 @@ HexSpatialPlot(object = colon.sct,group.by ='celltype',align ='v',
 ##### *Or*
 
 ```
-
+HexSpatialPlot(colon.sct,group.by = 'MUC2',legend = 'top',align = 'hv',ncol = 2)
 ```
+![MUC2](https://user-images.githubusercontent.com/122006615/233325374-3d4ae00c-d3ac-4cdc-97f1-1f312dd5cf81.png)
 ### Detect spot
 ```
 
