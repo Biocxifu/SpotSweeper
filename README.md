@@ -40,6 +40,11 @@ HexSpatialPlot(colon.sct,group.by = 'MUC2',legend = 'top',align = 'hv',ncol = 2)
 ```
 
 ```
+### Visualization for result
+```
+
+```
+
 ### Estimate the immune cell infiltration score
 ```
 colon1 <- RunssGSEA(object = colon1,genelist = immune_list)
