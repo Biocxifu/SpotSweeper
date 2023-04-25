@@ -15,7 +15,7 @@ devtools::install_github('Biocxifu/SpotSweeper')
 
 ```
 ### Contact to SpaCET
-SpaCet also provide the mailngant score and immune infiltration score.
+SpaCET also provide the mailngant score and immune infiltration score.
 This function can Run SpaCET deconvolution and import the result from SpaCET object into Seurat object.
 ```
 
