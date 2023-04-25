@@ -16,7 +16,7 @@ devtools::install_github('Biocxifu/SpotSweeper')
 ```
 ### Contact to SpaCet
 SpaCet also provide the mailngant score and immune infiltration score.
-This function can Run SpaCet and import the result from SpaCet object into Seurat object.
+This function can Run SpaCet and import the result from SpaCET object into Seurat object.
 ```
 
 ```
@@ -74,3 +74,4 @@ HexssGSEAplot(colon,type = 'C1QC_TAM')
 
 ## Citations
 - Gao S, Shi Q, Zhang Y, et al. Identification of HSC/MPP expansion units in fetal liver by single-cell spatiotemporal transcriptomics. Cell Res. 2022;32(1):38-53. doi:10.1038/s41422-021-00540-7
+- https://github.com/data2intelligence/SpaCET
