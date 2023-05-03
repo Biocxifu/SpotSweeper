@@ -44,6 +44,8 @@ HexSpatialPlot(colon.sct,group.by = 'MUC2',legend = 'top',align = 'hv',ncol = 2)
 ```
 
 ```
+![image](https://user-images.githubusercontent.com/122006615/235993210-3a841544-c772-4191-b2b1-55e456680756.png)
+
 
 ### Estimate the immune cell infiltration score
 ```
