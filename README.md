@@ -21,8 +21,7 @@ This function can Run SpaCET deconvolution and import the result from SpaCET obj
 
 ```
 ### manual annotation
-![L1_JHR9}TQGOQ)Q`~{P~O_5](https://user-images.githubusercontent.com/122006615/236168309-f92a66d7-a2fd-44b1-838f-64b5197a3006.png)
-
+<img width="882" alt="shniy" src="https://user-images.githubusercontent.com/122006615/236437705-821f551d-3853-4e28-beed-6f1a2c445be0.png">
 
 ### Visualization
 #### The package provide visualizable function for Spatial Transcriptomics data
