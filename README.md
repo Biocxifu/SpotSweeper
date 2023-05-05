@@ -20,11 +20,16 @@ This function can Run SpaCET deconvolution and import the result from SpaCET obj
 ```
 
 ```
-### Manual annotation
+### Modify spot annotation
+We develop a Rshiny to modify spot annotation accurately.We recommend setting the transparency of points to 0.1 and the shape of points to 1 or 16, and then manually annotating them.
 ```
 colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
 ```
-<img width="882" alt="shniy" src="https://user-images.githubusercontent.com/122006615/236437705-821f551d-3853-4e28-beed-6f1a2c445be0.png">
+<img width="895" alt="shniy" src="https://user-images.githubusercontent.com/122006615/236489772-de2981d0-f5a6-44bc-83af-76fa97edfe0f.png">
+
+
+>Meanwhile, Rshiny can support the mapping of gene expression levels and meta information to assist in the manual annotation. Certainly, spot annotation can also be displayed
+<img width="917" alt="shniy2" src="https://user-images.githubusercontent.com/122006615/236489800-0eaba4eb-a541-4633-b044-bded37bcb476.png">
 
 ### Visualization
 #### The package provide visualizable function for Spatial Transcriptomics data
