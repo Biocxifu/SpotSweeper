@@ -20,7 +20,10 @@ This function can Run SpaCET deconvolution and import the result from SpaCET obj
 ```
 
 ```
-### manual annotation
+### Manual annotation
+```
+colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
+```
 <img width="882" alt="shniy" src="https://user-images.githubusercontent.com/122006615/236437705-821f551d-3853-4e28-beed-6f1a2c445be0.png">
 
 ### Visualization
