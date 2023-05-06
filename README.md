@@ -29,7 +29,8 @@ colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
 
 
 Meanwhile, Rshiny can support the mapping of gene expression levels and meta information to assist in the manual annotation. Certainly, spot annotation can also be displayed
-><img width="917" alt="shniy2" src="https://user-images.githubusercontent.com/122006615/236489800-0eaba4eb-a541-4633-b044-bded37bcb476.png">
+![shiny_example](https://user-images.githubusercontent.com/122006615/236635092-8e74b9c6-9e35-41d1-a289-9db44a0e5593.gif)
+
 
 ### Visualization
 #### The package provide visualizable function for Spatial Transcriptomics data
