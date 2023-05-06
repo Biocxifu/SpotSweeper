@@ -32,10 +32,6 @@ Meanwhile, Rshiny can support the mapping of gene expression levels and meta inf
 ![image](https://github.com/Biocxifu/SpotSweeper/blob/main/shiny_example2.gif)
 
 
-https://user-images.githubusercontent.com/122006615/236636590-72daa708-49f7-4ebf-bc9d-d84519779107.mp4
-
-
-
 ### Visualization
 #### The package provide visualizable function for Spatial Transcriptomics data
 ##### *For metadata*
