@@ -1,8 +1,8 @@
-# SpotSweeper
+# SpotSweeper<img src="https://github.com/Biocxifu/SpotSweeper/blob/main/logo.png" align="right" alt="" width="200" />
 #### Estimate the immune cell infiltration score of adjacent stromal spots in specific groups of tumor spots
-![image](https://user-images.githubusercontent.com/122006615/233296103-12f4cde2-51f3-4b52-9826-357f8d6bd913.png)
 
 
+aaaaaaaaaaaaaaaaaaaaaaaaXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Install
 ```
