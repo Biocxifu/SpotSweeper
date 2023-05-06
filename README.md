@@ -2,7 +2,6 @@
 #### Estimate the immune cell infiltration score of adjacent stromal spots in specific groups of tumor spots
 ![logo](https://user-images.githubusercontent.com/122006615/236639340-d832f708-5478-499a-9bfb-7bcb0dd7c89f.png)
 
-![shiny_example2](https://user-images.githubusercontent.com/122006615/236639369-adc3824f-8432-4b80-9436-8bcf306b2106.gif)
 
 aaaaaaaaaaaaaaaaaaaaaaaaXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -32,6 +31,7 @@ colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
 
 Rshiny can support the mapping of gene expression levels and meta information to assist in the manual annotation. Spot annotation is displayed in the first line and the information you select to show is in the second line.The label color is equivalent to color bar
 ![image](https://github.com/Biocxifu/SpotSweeper/blob/main/shiny_example2.gif)
+![shiny_example2](https://user-images.githubusercontent.com/122006615/236639369-adc3824f-8432-4b80-9436-8bcf306b2106.gif)
 
 
 ### Visualization
