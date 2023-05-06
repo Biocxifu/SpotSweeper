@@ -35,7 +35,7 @@ Rshiny can support the mapping of gene expression levels and meta information to
 
 
 ### Visualization
-#### The package provide visualizable function for Spatial Transcriptomics data
+#### The package provide basic visualizable function for Spatial Transcriptomics data
 ##### *For metadata*
 ```
 HexSpatialPlot(object = colon.sct,group.by ='celltype',align ='v',
