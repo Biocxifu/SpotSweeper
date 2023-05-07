@@ -24,10 +24,10 @@ We develop a Rshiny to modify spot annotation accurately.We recommend setting th
 ```
 colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
 ```
-<img width="888" alt="shniy_example" src="https://user-images.githubusercontent.com/122006615/236654273-a131c380-d805-408d-93ad-400f2c4643e2.png">
+<img width="1000" alt="shniy_example" src="https://user-images.githubusercontent.com/122006615/236654377-cd4c73a1-04da-49da-973b-d6ae4d1862fb.png">
+
 
 Rshiny can support the mapping of gene expression levels and meta information to assist in the manual annotation. Spot annotation is displayed in the first line and the information you select to show is in the second line.The label color is equivalent to color bar
-![image](https://github.com/Biocxifu/SpotSweeper/blob/main/shiny_example2.gif)
 ![shiny_example2](https://user-images.githubusercontent.com/122006615/236639369-adc3824f-8432-4b80-9436-8bcf306b2106.gif)
 
 
