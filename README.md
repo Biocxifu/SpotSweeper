@@ -83,7 +83,7 @@ HexssGSEAplot(colon,type = 'C1QC_TAM')
 ### Immune state analysis
 
 ```
-ImmuneState() 
+ImmuneState(,CancerType='colon') 
 ```
 
 
