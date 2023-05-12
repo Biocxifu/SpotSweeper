@@ -80,7 +80,7 @@ HexssGSEAplot(colon,type = 'C1QC_TAM')
 ### Calculate enrichment fold
 ```
 ```
-### immune state analysis
+### Immune state analysis
 
 ```
 ImmuneState() 
