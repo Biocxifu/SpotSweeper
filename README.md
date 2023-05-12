@@ -80,10 +80,10 @@ HexssGSEAplot(colon,type = 'C1QC_TAM')
 ### Calculate enrichment fold
 ```
 ```
-### cytokine differential analysis
+### immune state analysis
 
 ```
-
+ImmuneState() 
 ```
 
 
