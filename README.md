@@ -1,5 +1,5 @@
 # SpotSweeper<img src="https://user-images.githubusercontent.com/122006615/236639340-d832f708-5478-499a-9bfb-7bcb0dd7c89f.png" align="right" alt="" width="200" />
-#### Estimate the immune cell infiltration score of adjacent stromal spots in specific groups of tumor spots
+#### Estimate the immune cell infiltration score of adjacent spots in specific groups of tumor spots
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
