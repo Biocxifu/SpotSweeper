@@ -5,8 +5,6 @@
 - It can estimate the score of spot immune cell infiltration and compare the differences in immune cell infiltration between specific tumor spots and adjacent spots.
 - It supports communication analysis between specific tumor spots and adjacent spots
 
-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
 ## Install
 ```
 devtools::install_github('Biocxifu/SpotSweeper')
