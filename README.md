@@ -1,5 +1,9 @@
 # SpotSweeper<img src="https://user-images.githubusercontent.com/122006615/236639340-d832f708-5478-499a-9bfb-7bcb0dd7c89f.png" align="right" alt="" width="200" />
-#### Estimate the immune cell infiltration score of adjacent spots in specific groups of tumor spots
+#### 
+- The package provides basic visualization functions and convenient interactive tools for manually annotating spots
+- It can select all nearby tumor spots and assign specific groups.
+- It can estimate the score of spot immune cell infiltration and compare the differences in immune cell infiltration between specific tumor spots and adjacent spots.
+- It supports communication analysis between specific tumor spots and adjacent spots
 
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
@@ -10,12 +14,6 @@ devtools::install_github('Biocxifu/SpotSweeper')
 ## Usage
 
 ### Load example data
-```
-
-```
-### Contact to SpaCET
-SpaCET also provide the mailngant score and immune infiltration score.
-This function can Run SpaCET deconvolution and import the result from SpaCET object into Seurat object.
 ```
 
 ```
