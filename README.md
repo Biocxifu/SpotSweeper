@@ -76,11 +76,20 @@ HexssGSEAplot(colon,type = 'C1QC_TAM')
 ### Calculate enrichment fold
 ```
 ```
-### Immune state analysis
+### Evaluate transcriptome Heterogeneity of Samples
 
 ```
-ImmuneState(,CancerType='colon') 
+
 ```
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/b25edad2-bfe7-4db0-b4ee-b5879faae6b5)
+
+
+### Cellular communication network
+
+```
+
+```
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/2c8618e2-35eb-4ac1-8867-9575faebc999)
 
 
 
