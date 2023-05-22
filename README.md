@@ -33,17 +33,21 @@ We recommend setting the transparency of points to 0 and the shape of points to 
 #### The package provide basic visualizable function for Spatial Transcriptomics data
 ##### *For metadata*
 ```
-HexSpatialPlot(object = colon.sct,group.by ='celltype',align ='v',
-               color = c('grey','blue','green',col,'skyblue','indianred1','khaki1')
+cols <- c('#0083c4','#ffdd00','#6aa692','#c27874','#ffaabf','#ffa500','#97cf16',
+          '#8ddcc3','#69008c','#d9d9d9','#ffbbff','#00bfff','#ff4040','#ffff00')
+p1 <- HexSpatialPlot(object = tissue,group.by = 'seurat_clusters',color = col,
+               legend = 'top',plot.image = T)
+p2 <- HexSpatialPlot(object = tissue,group.by = 'seurat_clusters',color = col,
+                     legend = 'top',plot.image = F,size = 1.5)
+p1+p2
 ```
-><img width="852" alt="b6178ecf05e799832c7e10923153269" src="https://user-images.githubusercontent.com/122006615/233295037-a748a6d2-826c-4bf2-8a45-c2040a9783ac.png">
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/23e8725f-10fe-44c9-92d6-fd8797acf487)
 
 ##### *Or gene expression*
 
 ```
 HexSpatialPlot(colon.sct,group.by = 'MUC2',legend = 'top',align = 'hv',ncol = 2)
 ```
->![MUC2](https://user-images.githubusercontent.com/122006615/233325374-3d4ae00c-d3ac-4cdc-97f1-1f312dd5cf81.png)
 ### Detect spot
 ```
 
