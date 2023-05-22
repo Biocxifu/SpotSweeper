@@ -105,6 +105,7 @@ p1+p2
 
 
 ### Estimate the immune cell infiltration score
+In fact, this applies not only to the gene set of immune cells, but also to other gene sets, depending on the research purpose
 ```
 colon1 <- RunssGSEA(object = colon1,genelist = immune_list)
 
