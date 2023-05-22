@@ -75,7 +75,10 @@ We develop a Rshiny to modify spot annotation accurately. Rshiny can support the
 ```
 colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
 ```
-<img width="1000" alt="shniy_example" src="https://user-images.githubusercontent.com/122006615/236654377-cd4c73a1-04da-49da-973b-d6ae4d1862fb.png">
+<img width="861" alt="shiny" src="https://github.com/Biocxifu/SpotSweeper/assets/122006615/28357d8a-8755-4124-b28a-67b4992a6b5c">
+<img width="896" alt="shiny2" src="https://github.com/Biocxifu/SpotSweeper/assets/122006615/9c88174d-760d-454e-b574-7f1dacfc3622">
+
+
 
 We recommend setting the transparency of points to 0 and the shape of points to 1 or 16, and then manually annotating them.
 ![shiny_example2](https://user-images.githubusercontent.com/122006615/236639369-adc3824f-8432-4b80-9436-8bcf306b2106.gif)
