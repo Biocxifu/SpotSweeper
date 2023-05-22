@@ -13,6 +13,9 @@ devtools::install_github('Biocxifu/SpotSweeper')
 
 ### Load example data
 ```
+#devtools::install_github("theMILOlab/SPATAData")
+# load package
+library(SPATAData)
 
 ```
 ### Modify spot annotation
