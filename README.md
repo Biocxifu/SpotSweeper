@@ -46,8 +46,15 @@ p1+p2
 ##### *Or gene expression*
 
 ```
-HexSpatialPlot(colon.sct,group.by = 'MUC2',legend = 'top',align = 'hv',ncol = 2)
+p1 <- HexSpatialPlot(object = tissue,group.by = 'KRT18',
+                     legend = 'top',plot.image = T,size = 1.2)
+p2 <- HexSpatialPlot(object = tissue,group.by = 'KRT18',
+                     legend = 'top',plot.image = F,size = 1.5)
+p1+p2
 ```
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/d7265313-4862-4535-a102-f34fbb01c9d0)
+
+
 ### Detect spot
 ```
 
