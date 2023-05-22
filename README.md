@@ -84,14 +84,24 @@ In addition to referencing the expression values of some marker genes, the malig
 
 ### Detect spot
 After annotating the spots, tumor grouping and detection of adjacent spots can be carried out
-```
 
+This process requires setting the tumor group first. If our research is based on gene expression for grouping, the simplest method is to directly group all spots without worrying about the group information of non tumor spots being calibrated, as the group information of non tumor spots will be ignored during function operation
 ```
-### Visualization for result
+tissue$group <- ifelse(tissue@assays$SCT@data['MKI67',]>0,'MKI67_pos','MKI67_neg')
+tissue <- SpotSweeper(tissue,group_var = 'group',celltype_var = 'celltype',
+                      tumor_name = c('Tumor'), nearby_name = c('Fibroblasts'))
 ```
+Visualization for result
+```
+col2 <- c('#6d419c','#f8766d','#d7ebff','#cab3d6','#ffc0cb','#cccccc','grey69')
+p1 <- HexSpatialPlot(object = tissue,group.by = 'Sweeper_type',color = col2,
+                     legend = 'top',plot.image = F,size = 1.2)
 
+p2 <- HexSpatialPlot(object = tissue,group.by = 'MKI67',
+                     legend = 'top',plot.image = F,size = 1.2)
+p1+p2
 ```
->![image](https://user-images.githubusercontent.com/122006615/235993210-3a841544-c772-4191-b2b1-55e456680756.png)
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/83e8be1a-0f1a-4696-8e10-f85e36934500)
 
 
 ### Estimate the immune cell infiltration score
