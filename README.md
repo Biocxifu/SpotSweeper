@@ -13,24 +13,26 @@ devtools::install_github('Biocxifu/SpotSweeper')
 
 ### Load example data
 ```
-#devtools::install_github("theMILOlab/SPATAData")
-# load package
-library(SPATAData)
+tissue <- Load10X_Spatial(data.dir = 'example/tissue1/',
+                              filename = 'Visium_FFPE_Human_Breast_Cancer_filtered_feature_bc_matrix.h5')
+tissue[["percent.mt"]] <- PercentageFeatureSet(tissue, pattern = "^[MT-]")
+tissue <- SCTransform(tissue, assay = "Spatial", verbose = FALSE)
 
-```
-### Modify spot annotation
-We develop a Rshiny to modify spot annotation accurately. Rshiny can support the mapping of gene expression levels and meta information to assist in the manual annotation. Spot annotation is displayed in the first line and the information you select to show is in the second line.The label color is equivalent to color bar. 
-```
-colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
-```
-<img width="1000" alt="shniy_example" src="https://user-images.githubusercontent.com/122006615/236654377-cd4c73a1-04da-49da-973b-d6ae4d1862fb.png">
+#filter
+#VlnPlot(tissue, features = c("nCount_Spatial","nFeature_Spatial","percent.mt"), pt.size = 0.1) + NoLegend()
+#tissue<- subset(tissue, subset = nFeature_Spatial > 200 & nFeature_Spatial <8000 &
+#                nCount_Spatial > 1000 & nCount_Spatial < 40000 & percent.mt < 20)
 
-We recommend setting the transparency of points to 0 and the shape of points to 1 or 16, and then manually annotating them.
-![shiny_example2](https://user-images.githubusercontent.com/122006615/236639369-adc3824f-8432-4b80-9436-8bcf306b2106.gif)
-
+##reduction
+tissue <- RunPCA(tissue, assay = "SCT", verbose = FALSE)
+tissue <- FindNeighbors(tissue, reduction = "pca", dims = 1:30)
+tissue <- FindClusters(tissue, verbose = FALSE,resolution = 0.9)
+tissue <- RunUMAP(tissue, reduction = "pca", dims = 1:30)
+tissue <- RunTSNE(tissue, dims = 1:30)
+```
 
 ### Visualization
-#### The package provide basic visualizable function for Spatial Transcriptomics data
+#### The package provide visualizable function for Spatial Transcriptomics data
 ##### *For metadata*
 ```
 cols <- c('#0083c4','#ffdd00','#6aa692','#c27874','#ffaabf','#ffa500','#97cf16',
@@ -38,10 +40,13 @@ cols <- c('#0083c4','#ffdd00','#6aa692','#c27874','#ffaabf','#ffa500','#97cf16',
 p1 <- HexSpatialPlot(object = tissue,group.by = 'seurat_clusters',color = col,
                legend = 'top',plot.image = T)
 p2 <- HexSpatialPlot(object = tissue,group.by = 'seurat_clusters',color = col,
+                     legend = 'top',plot.image =T,size = 1.4,alpha = 0.3)
+p3 <- HexSpatialPlot(object = tissue,group.by = 'seurat_clusters',color = col,
                      legend = 'top',plot.image = F,size = 1.5)
-p1+p2
+
+p1+p2+p3
 ```
-![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/23e8725f-10fe-44c9-92d6-fd8797acf487)
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/ff52eba5-2505-4845-89de-0bb89764398e)
 
 ##### *Or gene expression*
 
@@ -54,6 +59,26 @@ p1+p2
 ```
 ![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/d7265313-4862-4535-a102-f34fbb01c9d0)
 
+### Roughly annotate the spots
+
+```
+p1 <- HexSpatialPlot(object = tissue,group.by = 'KRT18',
+                     legend = 'top',plot.image = T,size = 1.2)
+p2 <- HexSpatialPlot(object = tissue,group.by = 'KRT18',
+                     legend = 'top',plot.image = F,size = 1.5)
+p1+p2
+```
+
+
+### Modify spot annotation
+We develop a Rshiny to modify spot annotation accurately. Rshiny can support the mapping of gene expression levels and meta information to assist in the manual annotation. Spot annotation is displayed in the first line and the information you select to show is in the second line.The label color is equivalent to color bar. 
+```
+colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
+```
+<img width="1000" alt="shniy_example" src="https://user-images.githubusercontent.com/122006615/236654377-cd4c73a1-04da-49da-973b-d6ae4d1862fb.png">
+
+We recommend setting the transparency of points to 0 and the shape of points to 1 or 16, and then manually annotating them.
+![shiny_example2](https://user-images.githubusercontent.com/122006615/236639369-adc3824f-8432-4b80-9436-8bcf306b2106.gif)
 
 ### Detect spot
 ```
