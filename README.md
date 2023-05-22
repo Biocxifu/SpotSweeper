@@ -79,7 +79,8 @@ HexssGSEAplot(colon,type = 'C1QC_TAM')
 ### Evaluate transcriptome Heterogeneity of Samples
 
 ```
-
+heterogeneity <- Heterogeneity(object = colon,TumorName = 'Tumor',celltype_var = 'celltype')
+heterogeneity <-as.data.frame(heterogeneity)
 ```
 ![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/b25edad2-bfe7-4db0-b4ee-b5879faae6b5)
 
@@ -87,7 +88,8 @@ HexssGSEAplot(colon,type = 'C1QC_TAM')
 ### Cellular communication network
 
 ```
-
+SpotChat(object = colon,subSample = 'colon1',cores = 8,
+         json.path = '../data/DataSource/ST-colon1/outs/spatial/scalefactors_json.json') 
 ```
 ![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/2c8618e2-35eb-4ac1-8867-9575faebc999)
 
