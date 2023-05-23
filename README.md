@@ -107,28 +107,32 @@ p1+p2
 ### Estimate the immune cell infiltration score
 In fact, this applies not only to the gene set of immune cells, but also to other gene sets, depending on the research purpose
 ```
-colon1 <- RunssGSEA(object = colon1,genelist = immune_list)
-
+tissue <- CellScore(object = tissue,method = 'AddModuleScore',genelist = NULL)
+tissue <- CellScore(object = tissue,method = 'ssGSEA',genelist = NULL,parallel.sz = 4)
 ```
-
-### DEboxplot
+### Visualization for immune cell infiltration score
 ```
-DEboxplot(colon)
-
+colnames(tissue@assays[["ImmuneScore"]]$ssGSEA)
+colnames(tissue@assays[["ImmuneScore"]]$AddModuleScore)
+p1 <- HexScorePlot(object = tissue,ScoreType = 'ssGSEA',
+                   type = 'Activated_CD8_T_cell',legend = 'top')
+p2 <- HexScorePlot(object = tissue,ScoreType = 'AddModuleScore',
+                   type = 'AddModuleScore_Activated_CD8_T_cell1',legend = 'top')
+p1+p2
 ```
->![image](https://user-images.githubusercontent.com/122006615/233399369-7799a532-706a-4568-8cd6-ad1148519c84.png)
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/b08ec0b0-9cee-406d-afba-8b07afb00601)
 
-### Visualization for ssGSEA score
+### Compare the scores of immune cell infiltration between groups and calculate enrichment fold
 ```
-HexssGSEAplot(colon,type = 'C1QC_TAM')
+table(tissue$Sweeper_type)
+ctr.group=list(c('MKI67_pos','Nearby_MKI67_pos'),c('MKI67_neg','Nearby_MKI67_neg'))
+DeScore <- DeScore(object = tissue,ScoreType = 'ssGSEA',hide.ns = T,
+               ctr.group = ctr.group)
+DeScore$Fold
+DeScore$plot
+```
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/19638ac6-4328-4e07-ae04-12f57e18aa15)
 
-```
-![image](https://user-images.githubusercontent.com/122006615/233401762-76ee47aa-95de-4b4f-babf-c0da475f9752.png)
-
-
-### Calculate enrichment fold
-```
-```
 ### Evaluate transcriptome Heterogeneity of Samples
 
 ```
@@ -139,7 +143,6 @@ heterogeneity <-as.data.frame(heterogeneity)
 
 
 ### Cellular communication network
-
 ```
 SpotChat(object = colon,subSample = 'colon1',cores = 8,
          json.path = '../data/DataSource/ST-colon1/outs/spatial/scalefactors_json.json') 
