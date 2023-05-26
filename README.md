@@ -2,8 +2,9 @@
 #### 
 - The package provides basic visualization functions and convenient interactive tools for manually annotating spots
 - It can select all nearby tumor spots and assign specific groups.
-- It can estimate the score of spot immune cell infiltration and compare the differences in immune cell infiltration between specific tumor spots and adjacent spots.
-- It supports communication analysis between specific tumor spots and adjacent spots
+- It can estimate the score of immune cell infiltration in spots and compare the score difference of immune cell infiltration between specific tumor spots and adjacent spots.
+- It can calculate the transcriptional heterogeneity of samples.
+- It supports communication analysis between specific tumor spots and adjacent spots.
 
 ## Install
 ```
