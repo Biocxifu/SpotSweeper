@@ -64,7 +64,7 @@ p1+p2
 The grouping here is casual, just for demonstration purposes
 ```
 celltype <- c("Tumor0"=c(5,6,9,11,12,13),
-              "Fibroblasts0"=c(0,1,2,4,7),#双极细胞
+              "Fibroblasts0"=c(0,1,2,4,7),
               'Unknown0'=c(3,8,10)
 ) %>% as.data.frame() 
 celltype %<>%mutate(celltype=str_split(rownames(celltype),'0',simplify = T)[,1]) %>% 
