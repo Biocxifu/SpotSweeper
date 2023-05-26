@@ -151,8 +151,6 @@ DeScore$plot
 heterogeneity <- Heterogeneity(object = colon,TumorName = 'Tumor',celltype_var = 'celltype')
 heterogeneity <-as.data.frame(heterogeneity)
 ```
-![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/b25edad2-bfe7-4db0-b4ee-b5879faae6b5)
-
 
 ### Cellular communication network
 ```
@@ -164,5 +162,6 @@ SpotChat(object = colon,subSample = 'colon1',cores = 8,
 
 
 ## Citations
-- Gao S, Shi Q, Zhang Y, et al. Identification of HSC/MPP expansion units in fetal liver by single-cell spatiotemporal transcriptomics. Cell Res. 2022;32(1):38-53. doi:10.1038/s41422-021-00540-7
-- https://github.com/data2intelligence/SpaCET
+- 	Gao S, Shi Q, Zhang Y, Liang G, Kang Z, Huang B, Ma D, Wang L, Jiao J, Fang X, et al. Identification of HSC/MPP expansion units in fetal liver by single-cell spatiotemporal transcriptomics. Cell Res (2022) 32:38–53. doi: 10.1038/s41422-021-00540-7
+- Ru B, Huang J, Zhang Y, Aldape K, Jiang P. Estimation of cell lineages in tumors from spatial transcriptomics data. Nat Commun (2023) 14:568. doi: 10.1038/s41467-023-36062-6
+- Wu R, Guo W, Qiu X, Wang S, Sui C, Lian Q, Wu J, Shan Y, Yang Z, Yang S, et al. Comprehensive analysis of spatial architecture in primary liver cancer. Sci Adv (2021) 7:eabg3750. doi: 10.1126/sciadv.abg3750
