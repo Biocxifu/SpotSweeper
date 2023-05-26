@@ -146,7 +146,7 @@ DeScore <- DeScore(object = tissue,ScoreType = 'ssGSEA',hide.ns = T,
 DeScore$Fold
 DeScore$plot
 ```
-![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/19638ac6-4328-4e07-ae04-12f57e18aa15)
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/59b0befa-9d27-4011-ab2d-20e485a27d2e)
 
 ### Evaluate transcriptome Heterogeneity of Samples
 
@@ -160,7 +160,7 @@ heterogeneity <-as.data.frame(heterogeneity)
 SpotChat(object = colon,subSample = 'colon1',cores = 8,
          json.path = '../data/DataSource/ST-colon1/outs/spatial/scalefactors_json.json') 
 ```
-![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/2c8618e2-35eb-4ac1-8867-9575faebc999)
+
 
 
 
