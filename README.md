@@ -12,6 +12,8 @@ devtools::install_github('Biocxifu/SpotSweeper')
 ```  
 ## Usage
 Most functions in this package support multiple samples. For convenience, we only use one sample for demonstration here
+data source：https://www.10xgenomics.com/resources/datasets/human-breast-cancer-ductal-carcinoma-in-situ-invasive-carcinoma-ffpe-1-standard-1-3-0
+
 ### Load example data
 ```
 tissue <- Load10X_Spatial(data.dir = 'example/tissue1/',
