@@ -61,13 +61,23 @@ p1+p2
 ![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/d7265313-4862-4535-a102-f34fbb01c9d0)
 
 ### Roughly annotate the spots
-
+The grouping here is casual, just for demonstration purposes
 ```
-p1 <- HexSpatialPlot(object = tissue,group.by = 'KRT18',
-                     legend = 'top',plot.image = T,size = 1.2)
-p2 <- HexSpatialPlot(object = tissue,group.by = 'KRT18',
-                     legend = 'top',plot.image = F,size = 1.5)
-p1+p2
+celltype <- c("Tumor0"=c(5,6,9,11,12,13),
+              "Fibroblasts0"=c(0,1,2,4,7),#双极细胞
+              'Unknown0'=c(3,8,10)
+) %>% as.data.frame() 
+celltype %<>%mutate(celltype=str_split(rownames(celltype),'0',simplify = T)[,1]) %>% 
+  rownames_to_column(var = 'dele') %>% select('celltype','.') %>% 
+  column_to_rownames(var = '.') 
+sort(unique(rownames(celltype)))
+table(rownames(celltype))
+
+tissue@meta.data$celltype='NA'
+for(i in 1:nrow(tissue@meta.data)){
+  index=as.character(tissue@meta.data$SCT_snn_res.0.9[i])
+  tissue@meta.data$celltype[i]=celltype[rownames(celltype)==index,1]
+}
 ```
 
 
@@ -121,7 +131,7 @@ p2 <- HexScorePlot(object = tissue,ScoreType = 'AddModuleScore',
                    type = 'AddModuleScore_Activated_CD8_T_cell1',legend = 'top')
 p1+p2
 ```
-![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/b08ec0b0-9cee-406d-afba-8b07afb00601)
+![image](The grouping here is casual, just for demonstration purposes)
 
 ### Compare the scores of immune cell infiltration between groups and calculate enrichment fold
 ```
