@@ -131,7 +131,8 @@ p2 <- HexScorePlot(object = tissue,ScoreType = 'AddModuleScore',
                    type = 'AddModuleScore_Activated_CD8_T_cell1',legend = 'top')
 p1+p2
 ```
-![image](The grouping here is casual, just for demonstration purposes)
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/e6973f54-dfd7-48a8-9a0e-f96aadaa0e61)
+
 
 ### Compare the scores of immune cell infiltration between groups and calculate enrichment fold
 ```
