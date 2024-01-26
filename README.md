@@ -87,7 +87,7 @@ for(i in 1:nrow(tissue@meta.data)){
 ### Modify spot annotation
 We have developed an R Shiny application to facilitate precise spot annotation. R Shiny enables the mapping of gene expression levels and meta-information to aid in the manual annotation process. Spot annotations are presented in the first line, and the selected information for display is showcased in the second line. The label color corresponds to the color bar.
 ```
-colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
+tissue <- SpotAnnotation(object = tissue,celltype_var = 'celltype')
 ```
 <img width="849" alt="shiny" src="https://github.com/Biocxifu/SpotSweeper/assets/122006615/0431b498-8172-43a7-96b6-ea042dcb2e81">
 
@@ -151,14 +151,14 @@ DeScore$plot
 ### Evaluate transcriptome Heterogeneity of Samples
 
 ```
-heterogeneity <- Heterogeneity(object = colon,TumorName = 'Tumor',celltype_var = 'celltype')
+heterogeneity <- Heterogeneity(object = tissue,TumorName = 'Tumor',celltype_var = 'celltype')
 heterogeneity <-as.data.frame(heterogeneity)
 ```
 
 ### Cellular communication network
 ```
-SpotChat(object = colon,subSample = 'colon1',cores = 8,
-         json.path = '../data/DataSource/ST-colon1/outs/spatial/scalefactors_json.json') 
+SpotChat(object = tissue,subSample = 'tissue1',cores = 8,
+         json.path = '../data/DataSource/ST-tissue1/outs/spatial/scalefactors_json.json') 
 ```
 
 
