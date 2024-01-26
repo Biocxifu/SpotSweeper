@@ -92,7 +92,7 @@ colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
 <img width="849" alt="shiny" src="https://github.com/Biocxifu/SpotSweeper/assets/122006615/0431b498-8172-43a7-96b6-ea042dcb2e81">
 
 We suggest configuring the transparency of points to 0 and selecting either shape 1 or 16 for points, followed by manual annotation.
-In addition to referencing the expression values of specific marker genes, we advocate considering the malignancy score computed by spaCET as an additional reference for correction, which could prove to be crucial.
+In addition to referencing the expression values of specific marker genes, we advocate considering the malignancy score computed by spaCET as an additional reference for correction.
 
 <img width="863" alt="shiny2" src="https://github.com/Biocxifu/SpotSweeper/assets/122006615/47d7e858-0224-43c1-a5ec-261529253c2b">
 
