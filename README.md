@@ -1,17 +1,17 @@
 # SpotSweeper<img src="https://user-images.githubusercontent.com/122006615/236639340-d832f708-5478-499a-9bfb-7bcb0dd7c89f.png" align="right" alt="" width="200" />
 #### 
-- The package provides basic visualization functions and convenient interactive tools for manually annotating spots
-- It can select all nearby tumor spots and assign specific groups.
-- It can estimate the score of immune cell infiltration in spots and compare the score difference of immune cell infiltration between specific tumor spots and adjacent spots.
-- It can calculate the transcriptional heterogeneity of samples.
-- It supports communication analysis between specific tumor spots and adjacent spots.
+- Utilize fundamental visualization functions and user-friendly interactive tools for manual annotation of spots.
+- Identify spots proximate to tumors and categorize them into specific groups.
+- Estimate the score of immune cell infiltration in spots and compare the score difference between specific tumor spots and adjacent spots.
+- Enable the computation of transcriptional heterogeneity within samples.
+- Facilitate communication analysis between specific tumor spots and adjacent spots.
 
 ## Install
 ```
 devtools::install_github('Biocxifu/SpotSweeper')
 ```  
 ## Usage
-Most functions in this package support multiple samples. For convenience, we only use one sample for demonstration here.
+The majority of functions within this software package are designed to accommodate multiple samples. However, for the purpose of clarity and convenience, we demonstrate the functionality using a single sample in this instance.
 
 data source：https://www.10xgenomics.com/resources/datasets/human-breast-cancer-ductal-carcinoma-in-situ-invasive-carcinoma-ffpe-1-standard-1-3-0
 
@@ -64,7 +64,7 @@ p1+p2
 ![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/d7265313-4862-4535-a102-f34fbb01c9d0)
 
 ### Roughly annotate the spots
-The grouping here is casual, just for demonstration purposes
+The categorization presented herein is informal and is solely employed for illustrative purposes.
 ```
 celltype <- c("Tumor0"=c(5,6,9,11,12,13),
               "Fibroblasts0"=c(0,1,2,4,7),
@@ -85,21 +85,21 @@ for(i in 1:nrow(tissue@meta.data)){
 
 
 ### Modify spot annotation
-We develop a Rshiny to modify spot annotation accurately. Rshiny can support the mapping of gene expression levels and meta information to assist in the manual annotation. Spot annotation is displayed in the first line and the information you select to show is in the second line.The label color is equivalent to color bar. 
+We have developed an R Shiny application to facilitate precise spot annotation. R Shiny enables the mapping of gene expression levels and meta-information to aid in the manual annotation process. Spot annotations are presented in the first line, and the selected information for display is showcased in the second line. The label color corresponds to the color bar.
 ```
 colon <- SpotAnnotation(object = colon,celltype_var = 'celltype')
 ```
 <img width="849" alt="shiny" src="https://github.com/Biocxifu/SpotSweeper/assets/122006615/0431b498-8172-43a7-96b6-ea042dcb2e81">
 
-We recommend setting the transparency of points to 0 and the shape of points to 1 or 16, and then manually annotating them.
-In addition to referencing the expression values of some marker genes, the malignancy score calculated using spaCET is also recommended as a reference for correction, which may even be important
+We suggest configuring the transparency of points to 0 and selecting either shape 1 or 16 for points, followed by manual annotation.
+In addition to referencing the expression values of specific marker genes, we advocate considering the malignancy score computed by spaCET as an additional reference for correction, which could prove to be crucial.
 
 <img width="863" alt="shiny2" src="https://github.com/Biocxifu/SpotSweeper/assets/122006615/47d7e858-0224-43c1-a5ec-261529253c2b">
 
 ### Detect spot
-After annotating the spots, tumor grouping and detection of adjacent spots can be carried out
+Following the annotation of the spots, subsequent steps involve tumor grouping and the identification of adjacent spots.
 
-This process requires setting the tumor group first. If our research is based on gene expression for grouping, the simplest method is to directly group all spots without worrying about the group information of non tumor spots being calibrated, as the group information of non tumor spots will be ignored during function operation
+This procedural sequence necessitates the initial establishment of the tumor group. When our research relies on gene expression for grouping, the most straightforward approach is to directly group all spots, without the need to calibrate the group information of non-tumor spots, as such information will be disregarded during the functioning of the process.
 ```
 tissue$group <- ifelse(tissue@assays$SCT@data['MKI67',]>0,'MKI67_pos','MKI67_neg')
 tissue <- SpotSweeper(tissue,group_var = 'group',celltype_var = 'celltype',
@@ -119,7 +119,7 @@ p1+p2
 
 
 ### Estimate the immune cell infiltration score
-In fact, this applies not only to the gene set of immune cells, but also to other gene sets, depending on the research purpose
+This assertion holds true not only for gene sets related to immune cells but extends to other gene sets as well, contingent on the objectives of the research.
 ```
 tissue <- CellScore(object = tissue,method = 'AddModuleScore',genelist = NULL)
 tissue <- CellScore(object = tissue,method = 'ssGSEA',genelist = NULL,parallel.sz = 4)
