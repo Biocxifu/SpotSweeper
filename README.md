@@ -1,3 +1,5 @@
+![Static Badge](https://img.shields.io/badge/Base-Seurat-brightgreen?link=https%3A%2F%2Fcran.r-project.org%2Fweb%2Fpackages%2FSeurat%2Findex.html)
+
 # SpotSweeper<img src="https://user-images.githubusercontent.com/122006615/236639340-d832f708-5478-499a-9bfb-7bcb0dd7c89f.png" align="right" alt="" width="200" />
 #### 
 - Utilize fundamental visualization functions and user-friendly interactive tools for manual annotation of spots.
