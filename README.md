@@ -162,7 +162,20 @@ heterogeneity <-as.data.frame(heterogeneity)
 SpotChat(object = tissue,subSample = 'tissue1',cores = 8,
          json.path = '../data/DataSource/ST-tissue1/outs/spatial/scalefactors_json.json') 
 ```
+### Spatially resolved niche classification (Kmeans method)
+##### *Determine the number of subtypes*
+```
+SpotChat(object = tissue,subSample = 'tissue1',cores = 8,
+         json.path = '../data/DataSource/ST-tissue1/outs/spatial/scalefactors_json.json') 
+```
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/7a1ae7e5-41b0-482a-87fe-e831863a4d6c)
 
+##### *niche subtypes*
+```
+SpotChat(object = tissue,subSample = 'tissue1',cores = 8,
+         json.path = '../data/DataSource/ST-tissue1/outs/spatial/scalefactors_json.json') 
+```
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/332562ef-73bf-4e38-9f44-7e471f025c40)
 
 
 
