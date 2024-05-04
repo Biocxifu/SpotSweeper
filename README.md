@@ -181,8 +181,14 @@ Ecotype_P[1]
 Ecotype_P[2]
 Ecotype_P[3]
 ```
-![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/332562ef-73bf-4e38-9f44-7e471f025c40)
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/1848869b-1aeb-4adb-8f9f-340814fd6b21)
 
+
+##### *Niche plot*
+```
+NichePlot <- NicheCalculate(Ecotype_P = Ecotype_P)
+```
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/50d25ba5-e8f8-4c20-a273-4a485e7b8f1d)
 
 
 ## Citations
