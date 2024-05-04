@@ -182,8 +182,7 @@ Ecotype_P[1]
 Ecotype_P[2]
 Ecotype_P[3]
 ```
-![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/1848869b-1aeb-4adb-8f9f-340814fd6b21)
-
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/e822b2ef-f665-43a4-85d2-3b74e5f15f4e)
 
 ##### *Niche plot*
 ```
