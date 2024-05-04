@@ -1,7 +1,7 @@
 Package: SpotSweeper
 Type: Package
 Title: Package for estimating the immune cell infiltration score of adjacent stromal spots in specific groups of tumor spots
-Version: 0.1.0
+Version: 0.2.0
 Author: person("Biocxifu",email = "xifu_cheng@email.ncu.edu.cn",role = c("aut","cre"))
 Maintainer: xifu_cheng <xifu_cheng@email.ncu.edu.cn>
 Description: Estimate the immune cell infiltration score of adjacent stromal spots in specific groups of tumor spots
