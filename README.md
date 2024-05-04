@@ -7,7 +7,6 @@
 - Estimate the score of immune cell infiltration in spots and compare the score difference between specific tumor spots and adjacent spots.
 - Enable the computation of transcriptional heterogeneity within samples.
 - Facilitate communication analysis between specific tumor spots and adjacent spots.
-- Execute spatially resolved niche classification and calculate the infiltration of characteristic cells in the micro-ecotype.
 
 ## Install
 ```
