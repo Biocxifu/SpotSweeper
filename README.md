@@ -165,15 +165,21 @@ SpotChat(object = tissue,subSample = 'tissue1',cores = 8,
 ### Spatially resolved niche classification (Kmeans method)
 ##### *Determine the number of subtypes*
 ```
-SpotChat(object = tissue,subSample = 'tissue1',cores = 8,
-         json.path = '../data/DataSource/ST-tissue1/outs/spatial/scalefactors_json.json') 
+Cluster_p <- NicheKmeans(object = tissue,ncol = 2)
+Cluster_p
 ```
-![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/7a1ae7e5-41b0-482a-87fe-e831863a4d6c)
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/44707b72-0351-4bbc-b340-cc51bdee2078)
 
-##### *niche subtypes*
+
+
+##### *Niche subtypes*
 ```
-SpotChat(object = tissue,subSample = 'tissue1',cores = 8,
-         json.path = '../data/DataSource/ST-tissue1/outs/spatial/scalefactors_json.json') 
+Ecotype_P <- NicheCluster(object = tissue,centers = 6,
+                         color = c("#87ceeb" ,'#ffa8ad' ,
+                                   "#ffc37f",'#fc8d62',"#33b24a",'#ad71b5'))
+Ecotype_P[1]
+Ecotype_P[2]
+Ecotype_P[3]
 ```
 ![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/332562ef-73bf-4e38-9f44-7e471f025c40)
 
