@@ -102,7 +102,7 @@ In addition to referencing the expression values of specific marker genes, we ad
 ### Detect spot
 Following the annotation of the spots, subsequent steps involve tumor grouping and the identification of adjacent spots.
 
-This procedural sequence necessitates the initial establishment of the tumor group. When our research relies on gene expression for grouping, the most straightforward approach is to directly group all spots, without the need to calibrate the group information of non-tumor spots, as such information will be disregarded during the functioning of the process.
+The sequence of the procedure requires the initial creation of tumour groups. When our study relies on gene expression for grouping, the most straightforward approach is to group all spots directly without the need to calibrate the grouping information for non-tumour spots. Information from non-tumour spots is ignored in the process.
 ```
 tissue$group <- ifelse(tissue@assays$SCT@data['MKI67',]>0,'MKI67_pos','MKI67_neg')
 tissue <- SpotSweeper(tissue,group_var = 'group',celltype_var = 'celltype',
