@@ -187,8 +187,11 @@ Ecotype_P[3]
 ##### *Niche plot*
 ```
 NichePlot <- NicheCalculate(Ecotype_P = Ecotype_P)
+NichePlot[1]
+NichePlot[2]
 ```
-![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/50d25ba5-e8f8-4c20-a273-4a485e7b8f1d)
+![image](https://github.com/Biocxifu/SpotSweeper/assets/122006615/aa685b25-71de-4a9c-92fc-4bade17af4b1)
+
 
 
 ## Citations
